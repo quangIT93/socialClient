@@ -62,3 +62,5 @@ Constants: Thư mục chứa các hằng số được sử dụng trong ứng d
 Selectors: Thư mục chứa các selectors của Redux. Các selector là các hàm được sử dụng để truy xuất trạng thái của ứng dụng và trả về các giá trị cụ thể.
 
 Middleware: Thư mục chứa các middleware của Redux. Middleware là các hàm được thực thi trước khi action đến reducers, để thực hiện các tác vụ khác nhau như ghi log, xử lý bất đồng bộ, ...
+
+# socialClient
