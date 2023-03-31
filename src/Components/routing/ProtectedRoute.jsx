@@ -1,23 +1,14 @@
 import { Outlet, Navigate } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
-import Spinner from "react-bootstrap/Spinner";
-import NavbarMenu from "../layouts/NavbarMenu";
+
+import Navbar from "../Layouts/Navbar";
 
 const ProtectedRoute = () => {
-  const {
-    authState: { authLoading, isAuthenticated },
-  } = useContext(AuthContext);
-  if (authLoading)
-    return (
-      <div className="spinner-container">
-        <Spinner animation="border" variant="info" />
-      </div>
-    );
+  const isAuthenticated = true;
 
   return isAuthenticated ? (
     <>
-      <NavbarMenu />
+      <Navbar />
       <Outlet />
     </>
   ) : (
