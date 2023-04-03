@@ -15,7 +15,7 @@ import LogoutButton from "./Components/Auth/RegisterForm";
 import ProtectedRoute from "./Components/routing/ProtectedRoute";
 
 // import Page
-import Auth from "./pages/Auth";
+import Auth from "./pages/Auth/Auth";
 import Homepage from "./pages/Homepage";
 
 // import css

@@ -1,0 +1,96 @@
+.dashboard {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../../public/assets/hinh-nen-mau-tim-nhat-cute-full-hd.jpg");
+  background-size: cover;
+  .form-container {
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    h2 {
+      color: black;
+      font-size: 2rem;
+    }
+
+    .form {
+      form {
+        .input-box {
+          position: relative;
+          border-bottom: 1px solid #000;
+          input {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.4rem 0.4rem;
+            box-sizing: border-box;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+          }
+        }
+
+        .icon_close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #000;
+          opacity: 0.7;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        button {
+          margin: 1rem;
+          padding: 8px 16px;
+          background-color: #1877f2;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          color: #fff;
+        }
+
+        .option-field {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            display: flex;
+            align-items: center;
+            input {
+            }
+
+            label {
+              cursor: pointer;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+
+        .register_signIn,
+        .login_signUp {
+          margin-top: 1rem;
+
+          a {
+            text-decoration: none;
+            color: #1877f2;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .login-form {
+    }
+  }
+}
