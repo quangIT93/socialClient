@@ -1,9 +1,5 @@
 @import "../../rootCSS/variables";
 
-body {
-  overflow: hidden;
-}
-
 .header {
   height: 3rem;
   background-color: $light-color__black;
@@ -101,13 +97,9 @@ body {
         cursor: pointer;
         &:hover {
           background-color: $light-color__gray;
-        }
-
-        &:hover {
           .suggest {
             animation: 0.4s fadeIn;
             animation-fill-mode: forwards;
-            // visibility: visible;
           }
         }
         .nav-icon {
@@ -137,7 +129,24 @@ body {
           border-radius: 5px;
           visibility: hidden;
           font-size: 0.8rem;
+          .arrow-up {
+            position: absolute;
+            top: -0.6rem;
+            right: 50%;
+            transform: translateX(50%);
+            width: 0;
+            height: 0;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-bottom: 10px solid #ccc; /* sử dụng màu xám nhạt */
+            // transform: rotate(0deg);
+            // background-color: red;
+          }
         }
+      }
+
+      .nav-wrap__icon.active {
+        background-color: $primary-color;
       }
 
       .nav-menu {

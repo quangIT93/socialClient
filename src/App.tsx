@@ -16,7 +16,8 @@ import ProtectedRoute from "./Components/routing/ProtectedRoute";
 
 // import Page
 import Auth from "./pages/Auth/Auth";
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/HomePage/Homepage";
+import Profile from "./pages/Profile/Profile";
 
 // import css
 import "./App.css";
@@ -32,7 +33,8 @@ function App() {
             <Route path="register" element={<LogoutButton />} />
           </Route>
           <Route path="/" element={<ProtectedRoute />}>
-            <Route path="dashboard" element={<Homepage />} />
+            <Route path="homepage" element={<Homepage />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Routes>
       </Router>

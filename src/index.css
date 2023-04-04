@@ -4,6 +4,12 @@
    License: none (public domain)
 */
 
+body {
+  /* box-sizing: border-box; */
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
 html,
 body,
 div,

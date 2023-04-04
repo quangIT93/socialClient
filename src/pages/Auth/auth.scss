@@ -1,37 +1,69 @@
+@import "../../rootCSS/variables";
+
 .dashboard {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../../public/assets/hinh-nen-mau-tim-nhat-cute-full-hd.jpg");
-  background-size: cover;
+  background: url("../../../public/assets/speaking-out-scaled.jpg") no-repeat
+    center;
+  background-size: contain;
+
+  .open-wrap__form {
+    // display: flex;
+    // align-items: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    // transform: translateY(-50%);
+    background-color: $color-transparent;
+    border-radius: 5px;
+    color: $light-color__white;
+    padding: 1.2rem 5rem;
+    display: none;
+    .open-form {
+      color: $color-red;
+      cursor: pointer;
+    }
+  }
+  .open-wrap__form.active {
+    display: block;
+  }
+
   .form-container {
     position: absolute;
-    max-width: 320px;
+    max-width: 520px;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: $light-color__white;
+    background-color: $color-transparent;
+
     border-radius: 12px;
     padding: 25px;
+    // display: none;
     h2 {
       color: black;
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     .form {
       form {
         .input-box {
           position: relative;
-          border-bottom: 1px solid #000;
+          // border-bottom: 1px solid #000;
           input {
             width: 100%;
             margin-top: 1rem;
-            padding: 0.4rem 0.4rem;
+            padding: 0.8rem;
             box-sizing: border-box;
-            border-radius: 5px;
+            border-radius: 12px;
             outline: none;
             border: none;
+            font-size: 1.2rem;
+            font-weight: 300;
           }
         }
 
@@ -41,18 +73,19 @@
           right: 10px;
           color: #000;
           opacity: 0.7;
-          font-size: 1.2rem;
+          font-size: 2rem;
           cursor: pointer;
         }
 
         button {
-          margin: 1rem;
-          padding: 8px 16px;
+          margin: 2rem;
+          padding: 0.8rem 1.6rem;
           background-color: #1877f2;
           border-radius: 5px;
           outline: none;
           border: none;
           color: #fff;
+          font-size: 1.2rem;
         }
 
         .option-field {
@@ -67,6 +100,7 @@
 
             label {
               cursor: pointer;
+              font-size: 1.2rem;
             }
           }
 
@@ -74,17 +108,19 @@
             text-decoration: none;
             color: #000;
             cursor: pointer;
+            font-size: 1.2rem;
           }
         }
 
         .register_signIn,
         .login_signUp {
           margin-top: 1rem;
+          font-size: 1.2rem;
 
           a {
             text-decoration: none;
-            color: #1877f2;
-            font-size: 1.2rem;
+            color: $color-red;
+            font-size: 1.8rem;
           }
         }
       }
@@ -93,4 +129,11 @@
     .login-form {
     }
   }
+  .form-container.active {
+    display: none;
+  }
+
+  // h2 {
+  //   font-size: 2rem;
+  // }
 }

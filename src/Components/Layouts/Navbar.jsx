@@ -8,8 +8,44 @@ import {
 } from "react-icons/md";
 
 import "./navbar.scss";
+import { useState } from "react";
 
 const Navbar = () => {
+  // const [activeItem, setActiveItem] = useState("");
+  const [activeIconNotify, setActiveIconNotify] = useState("");
+  const [activeIconChat, setActiveIconChat] = useState("");
+  const [activeIconMenu, setActiveIconMenu] = useState("");
+
+  const handleClickIconMenu = () => {
+    if (!activeIconMenu) {
+      setActiveIconMenu("active");
+      setActiveIconChat("");
+      setActiveIconNotify("");
+    } else {
+      setActiveIconMenu("");
+    }
+  };
+
+  const handleClickIconNotify = () => {
+    if (!activeIconNotify) {
+      setActiveIconNotify("active");
+      setActiveIconChat("");
+      setActiveIconMenu("");
+    } else {
+      setActiveIconNotify("");
+    }
+  };
+
+  const handleClickIconChat = () => {
+    if (!activeIconChat) {
+      setActiveIconChat("active");
+      setActiveIconNotify("");
+      setActiveIconMenu("");
+    } else {
+      setActiveIconChat("");
+    }
+  };
+
   return (
     <header className="header">
       <nav className="nav">
@@ -47,19 +83,37 @@ const Navbar = () => {
         </ul>
 
         <div className="nav-user__setup">
-          <div className="nav-menu nav-wrap__icon">
+          <div
+            className={`nav-menu nav-wrap__icon ${activeIconMenu}`}
+            onClick={handleClickIconMenu}
+          >
             <MdOutlineGridOn className="nav-menu__icon nav-icon" />
-            <div className="suggest">Menu</div>
+            <div className="suggest">
+              Menu
+              <div className="arrow-up"></div>
+            </div>
           </div>
-          <div className="nav-notify nav-wrap__icon">
+          <div
+            className={`nav-notify nav-wrap__icon ${activeIconNotify}`}
+            onClick={handleClickIconNotify}
+          >
             <span>1</span>
             <MdNotifications className="nav-notify__icon nav-icon" />
-            <div className="suggest">thông báo</div>
+            <div className="suggest">
+              thông báo
+              <div className="arrow-up"></div>
+            </div>
           </div>
-          <div className="nav-chat nav-wrap__icon">
+          <div
+            className={`nav-chat nav-wrap__icon ${activeIconChat}`}
+            onClick={handleClickIconChat}
+          >
             <span>2</span>
             <MdOutlineChat className="nav-chat__icon nav-icon" />
-            <div className="suggest">Messager</div>
+            <div className="suggest">
+              Messager
+              <div className="arrow-up"></div>
+            </div>
           </div>
           <div className="nav-user nav-wrap__icon">
             {/* <MdNotifications className="nav-user__icon nav-icon" /> */}
@@ -67,7 +121,10 @@ const Navbar = () => {
               src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.6435-1/128874832_671366850176578_1800217870310205780_n.jpg?stp=dst-jpg_p240x240&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=nErYauU-RNAAX-U-Ayr&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfCKFVJvRYjDjJKYt5g2Q2lqvnEF_LIDCP3_In5c9MquLg&oe=645178FC"
               alt=""
             />
-            <div className="suggest">Tài khoản</div>
+            <div className="suggest">
+              Tài khoản
+              <div className="arrow-up"></div>
+            </div>
           </div>
         </div>
       </nav>

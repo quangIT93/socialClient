@@ -64,3 +64,14 @@ Selectors: Thư mục chứa các selectors của Redux. Các selector là các 
 Middleware: Thư mục chứa các middleware của Redux. Middleware là các hàm được thực thi trước khi action đến reducers, để thực hiện các tác vụ khác nhau như ghi log, xử lý bất đồng bộ, ...
 
 # socialClient
+
+Thống kê các kích thước màn hình cơ bản phục vụ cho thiết kế Web Responsive.
+Tham khảo:
+
+max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).

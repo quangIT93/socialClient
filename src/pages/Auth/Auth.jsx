@@ -6,10 +6,12 @@ import "./auth.scss";
 import Navbar from "../../Components/Layouts/Navbar";
 function Auth() {
   const body = <Outlet />;
+
   return (
     <>
       <div className="dashboard">
         <Navbar />
+
         {body}
       </div>
     </>
