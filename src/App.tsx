@@ -2,8 +2,8 @@ import React from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { useSelector } from "react-redux";
-import type { RootState } from "./Type/types";
+// import { useSelector } from "react-redux";
+// import type { RootState } from "./Type/types";
 
 // ladding
 import Landing from "./Components/Layouts/Landing";
@@ -21,8 +21,15 @@ import Profile from "./pages/Profile/Profile";
 
 // import css
 import "./App.css";
+import ProfilePost from "./Components/Profile/Posts/ProfilePost";
+import ProfileIntroduce from "./Components/Profile/Introduce/ProfileIntroduce";
+import ProfileFriend from "./Components/Profile/Friends/ProfileFriend";
+import ProfileImage from "./Components/Profile/Images/ProfileImage";
+import ProfileVideo from "./Components/Profile/Videos/ProfileVideo";
+import ProfileCheckIn from "./Components/Profile/CheckIn/ProfileCheckIn";
+import ProfileSeeMore from "./Components/Profile/SeeMore/ProfileSeeMore";
 function App() {
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+  // const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   return (
     <div className="App">
       <Router>
@@ -34,7 +41,15 @@ function App() {
           </Route>
           <Route path="/" element={<ProtectedRoute />}>
             <Route path="homepage" element={<Homepage />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<Profile />}>
+              <Route path="posts" element={<ProfilePost />} />
+              <Route path="introduce" element={<ProfileIntroduce />} />
+              <Route path="friends" element={<ProfileFriend />} />
+              <Route path="images" element={<ProfileImage />} />
+              <Route path="videos" element={<ProfileVideo />} />
+              <Route path="checkIn" element={<ProfileCheckIn />} />
+              <Route path="seeMore" element={<ProfileSeeMore />} />
+            </Route>
           </Route>
         </Routes>
       </Router>

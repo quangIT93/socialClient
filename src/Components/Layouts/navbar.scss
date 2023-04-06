@@ -1,12 +1,16 @@
 @import "../../rootCSS/variables";
 
 .header {
-  height: 3rem;
-  background-color: $light-color__black;
+  height: 5rem;
+  background-color: $dark-color__black;
   //   background-color: $primary-color;
   //   display: flex;
   //   text-align: center;
   //   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   .nav {
     display: flex;
     align-items: center;
