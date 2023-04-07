@@ -1,6 +1,6 @@
 @import "../../../rootCSS/variables";
 .profile-post {
-  //   height: 50rem;
+  // height: 50rem;
   max-width: 82.5rem;
   border-radius: 12px;
   margin: 1.5rem auto 0 auto;
@@ -10,5 +10,17 @@
   justify-content: space-between;
   gap: 1.5rem;
   background-color: $dark-color__black;
-  position: relative;
+  // position: relative;
+  // height: 100%;
+  // box-sizing: border-box;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+  &:hover {
+    .profile-post__left {
+    }
+
+    .profile-post-right {
+      overflow-y: scroll;
+    }
+  }
 }

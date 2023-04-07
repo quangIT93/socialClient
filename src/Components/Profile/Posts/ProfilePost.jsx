@@ -1,11 +1,5 @@
 import React from "react";
 
-import {
-  MdFlag,
-  // MdAddAPhoto,
-  MdAddPhotoAlternate,
-  MdVideoCameraBack,
-} from "react-icons/md";
 // import component
 import LeftPost from "./LeftPost/LeftPost";
 import RightPost from "./RightPost/RightPost";

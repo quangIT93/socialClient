@@ -6,11 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  position: absolute;
-  width: 50%;
-  left: 0;
   overflow-y: scroll;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 5rem);
 
   .post-left__introduce {
     background-color: $light-color__black;
