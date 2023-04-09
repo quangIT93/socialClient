@@ -1,0 +1,26 @@
+@import "../../../rootCSS/variables";
+
+.profile-post__introduce {
+  max-width: 82.5rem;
+  // border-radius: 12px;
+  margin: 1.5rem auto 0 auto;
+  // background-color: $light-color__black;
+  color: wheat;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  .wrap-introduce__items {
+    border-radius: 12px;
+  }
+
+  .wrap-video {
+    border-radius: 12px;
+  }
+
+  .wrap-introduce {
+    display: flex;
+  }
+}

@@ -22,12 +22,12 @@ import Profile from "./pages/Profile/Profile";
 // import css
 import "./App.css";
 import ProfilePost from "./Components/Profile/Posts/ProfilePost";
-import ProfileIntroduce from "./Components/Profile/Introduce/ProfileIntroduce";
+import ProfileIntroduce from "./Components/Profile/Introduces/ProfileIntroduce";
 import ProfileFriend from "./Components/Profile/Friends/ProfileFriend";
 import ProfileImage from "./Components/Profile/Images/ProfileImage";
 import ProfileVideo from "./Components/Profile/Videos/ProfileVideo";
 import ProfileCheckIn from "./Components/Profile/CheckIn/ProfileCheckIn";
-import ProfileSeeMore from "./Components/Profile/SeeMore/ProfileSeeMore";
+
 function App() {
   // const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   return (
@@ -48,7 +48,6 @@ function App() {
               <Route path="images" element={<ProfileImage />} />
               <Route path="videos" element={<ProfileVideo />} />
               <Route path="checkIn" element={<ProfileCheckIn />} />
-              <Route path="seeMore" element={<ProfileSeeMore />} />
             </Route>
           </Route>
         </Routes>

@@ -1,0 +1,248 @@
+@import "../../../rootCSS/variables";
+
+.profile-user {
+  background-color: $light-color__black;
+  min-height: 46rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  border-radius: 12px 12px;
+  .profile-image__cover {
+    height: 100%;
+    img {
+      height: 32rem;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .profile-user__info {
+    height: 14rem;
+    border-bottom: 1px solid $light-color__white;
+    .user-info {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      // align-items: center;
+      height: 100%;
+      .user-info__avatar {
+        background-color: $light-color__black;
+        position: absolute;
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        top: -7rem;
+        left: 38rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 12rem;
+          height: 12rem;
+          border-radius: 50%;
+        }
+        .wrap-icon-avatar {
+          background-color: $dark-color__gray;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          position: absolute;
+          right: 0.5rem;
+          bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          .icon-avatar {
+            font-size: 2.2rem;
+            color: $dark-color__white;
+          }
+        }
+      }
+      .user-info__general {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        h2 {
+          font-size: 3rem;
+          color: $light-color__white;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-weight: 600;
+        }
+        span {
+          color: $dark-color__white;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+        .user-info__friends {
+          position: relative;
+          img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+          }
+          :nth-child(1) {
+            left: 15rem;
+          }
+          :nth-child(2) {
+            left: 12rem;
+          }
+          :nth-child(3) {
+            left: 9rem;
+          }
+          :nth-child(4) {
+            left: 6rem;
+          }
+          :nth-child(5) {
+            left: 3rem;
+          }
+          :nth-child(6) {
+            left: 0rem;
+          }
+
+          .more-friends {
+            position: absolute;
+            left: 15.6rem;
+            top: 0.6rem;
+            .iconUser-info__friends {
+              color: $light-color__black;
+              font-size: 3rem;
+              cursor: pointer;
+            }
+
+            span {
+              background-color: red;
+              position: absolute;
+              top: 3.6rem;
+              // right: 0;
+              left: -2rem;
+              padding: 0.5rem 1.2rem;
+              background-color: $light-color__white;
+              border-radius: 12px;
+              color: $light-color__black;
+              visibility: hidden;
+            }
+
+            &:hover {
+              span {
+                animation: 0.4s fadeIn;
+                animation-fill-mode: forwards;
+              }
+            }
+          }
+        }
+      }
+      .user-info__edit {
+        //   padding: 2rem;\
+        height: 100%;
+        //   background-color: aqua;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        span:first-child {
+          margin-bottom: 2rem;
+        }
+        span {
+          background-color: $button-color;
+          padding: 0.4rem 1rem;
+          border-radius: 12px;
+          font-size: 2rem;
+          color: $light-color__white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon-user__edit {
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .post-items {
+    // background-color: burlywood;
+    display: flex;
+
+    align-items: center;
+
+    height: 4rem;
+
+    .post-item {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      margin-left: 0.4rem;
+      height: 100%;
+      position: relative;
+      .link-post {
+        color: $light-color__white;
+        display: inline-block;
+        font-size: 1.3rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 4rem;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 550;
+
+        &:hover {
+          background-color: $darkL-color__white;
+          transition: all 0.3s linear;
+        }
+      }
+
+      .sub-post__items {
+        position: absolute;
+        width: 20rem;
+        background-color: $light-color__black;
+
+        flex-direction: column;
+        top: 100%;
+        left: -1rem;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 1px 1px 20px 5px $darkL-color__white;
+        display: none;
+        text-transform: capitalize;
+        .sub-post__item {
+          padding: 0.6rem 1rem;
+          // margin: 1rem;
+          font-size: 1.4rem;
+          text-decoration: none;
+          border-radius: 12px;
+          margin: 0.4rem 0;
+          &:hover {
+            background-color: $darkl-color__white;
+            transition: 0.3s all linear;
+          }
+        }
+      }
+
+      .sub-post__items.show {
+        display: flex;
+      }
+    }
+
+    .post-item.active {
+      border-bottom: 3px solid $primary-color;
+      .link-post {
+        color: $primary-color;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}

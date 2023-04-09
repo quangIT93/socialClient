@@ -1,0 +1,13 @@
+@import "../../../rootCSS/variables";
+
+.profile-post__image {
+  max-width: 82.5rem;
+  border-radius: 12px;
+  margin: 1.5rem auto 0 auto;
+  color: wheat;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+  .wrap-introduce__items {
+    border-radius: 12px;
+  }
+}
