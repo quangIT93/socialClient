@@ -18,7 +18,12 @@ import ProtectedRoute from "./Components/routing/ProtectedRoute";
 import Auth from "./pages/Auth/Auth";
 import Homepage from "./pages/HomePage/Homepage";
 import Profile from "./pages/Profile/Profile";
-
+import FriendPage from "./pages/FriendPage/FriendPage";
+import JobPage from "./pages/JobPage/JobPage";
+import WatchPage from "./pages/WatchPage/WatchPage";
+import MessagePage from "./pages/MessagePage/MessagePage";
+import ShoppingPage from "./pages/ShoppingPage/ShoppingPage";
+import GroupPage from "./pages/GroupPage/GroupPage";
 // import css
 import "./App.css";
 import ProfilePost from "./Components/Profile/Posts/ProfilePost";
@@ -49,6 +54,12 @@ function App() {
               <Route path="videos" element={<ProfileVideo />} />
               <Route path="checkIn" element={<ProfileCheckIn />} />
             </Route>
+            <Route path="jobPage" element={<JobPage />} />
+            <Route path="watchPage" element={<WatchPage />} />
+            <Route path="messagePage" element={<MessagePage />} />
+            <Route path="shoppingPage" element={<ShoppingPage />} />
+            <Route path="friendPage" element={<FriendPage />} />
+            <Route path="groupPage" element={<GroupPage />} />
           </Route>
         </Routes>
       </Router>

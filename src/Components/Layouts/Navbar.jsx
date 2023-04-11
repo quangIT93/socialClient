@@ -10,11 +10,13 @@ import {
 import "./navbar.scss";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
   // const [activeItem, setActiveItem] = useState("");
   const [activeIconNotify, setActiveIconNotify] = useState("");
   const [activeIconChat, setActiveIconChat] = useState("");
   const [activeIconMenu, setActiveIconMenu] = useState("");
+
+  const { showMore, setShowMore, pathname } = props;
 
   const handleClickIconMenu = () => {
     if (!activeIconMenu) {
@@ -45,7 +47,8 @@ const Navbar = () => {
       setActiveIconChat("");
     }
   };
-
+  console.log(showMore);
+  console.log(pathname);
   return (
     <header className="header">
       <nav className="nav">
@@ -60,23 +63,46 @@ const Navbar = () => {
         </div>
         <ul className="nav-items">
           <li className="nav-item">
-            <Link to="" className="nav-link active">
+            <Link
+              to="homePage"
+              className={`nav-link ${pathname === "/homePage" ? "active" : ""}`}
+            >
               Trang chủ
             </Link>
 
-            <Link to="" className="nav-link">
+            <Link
+              to="friendPage"
+              className={`nav-link ${
+                pathname === "/friendPage" ? "active" : ""
+              }`}
+            >
               Bạn bè
             </Link>
 
-            <Link to="" className="nav-link">
+            <Link
+              to="watchPage"
+              className={`nav-link ${
+                pathname === "/watchPage" ? "active" : ""
+              }`}
+            >
               Watch
             </Link>
 
-            <Link to="" className="nav-link">
+            <Link
+              to="groupPage"
+              className={`nav-link ${
+                pathname === "/groupPage" ? "active" : ""
+              }`}
+            >
               Nhóm
             </Link>
 
-            <Link to="" className="nav-link">
+            <Link
+              to="shoppingPage"
+              className={`nav-link ${
+                pathname === "/shoppingPage" ? "active" : ""
+              }`}
+            >
               Mua sắm
             </Link>
           </li>
@@ -115,7 +141,7 @@ const Navbar = () => {
               <div className="arrow-up"></div>
             </div>
           </div>
-          <div className="nav-user nav-wrap__icon">
+          <Link className="nav-user nav-wrap__icon" to="profile/introduce">
             {/* <MdNotifications className="nav-user__icon nav-icon" /> */}
             <img
               src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.6435-1/128874832_671366850176578_1800217870310205780_n.jpg?stp=dst-jpg_p240x240&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=nErYauU-RNAAX-U-Ayr&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfCKFVJvRYjDjJKYt5g2Q2lqvnEF_LIDCP3_In5c9MquLg&oe=645178FC"
@@ -125,7 +151,7 @@ const Navbar = () => {
               Tài khoản
               <div className="arrow-up"></div>
             </div>
-          </div>
+          </Link>
         </div>
       </nav>
     </header>

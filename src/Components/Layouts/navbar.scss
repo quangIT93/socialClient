@@ -135,12 +135,14 @@
         .suggest {
           position: absolute;
           bottom: -2rem;
-          padding: 0.3rem 0;
-          min-width: 4.4rem;
+          padding: 0.4rem 1rem;
+          min-width: 7rem;
           background-color: #ccc;
           border-radius: 5px;
           visibility: hidden;
-          font-size: 0.8rem;
+          font-size: 1.2rem;
+          text-align: center;
+          color: $dark-color__black;
           .arrow-up {
             position: absolute;
             top: -0.6rem;

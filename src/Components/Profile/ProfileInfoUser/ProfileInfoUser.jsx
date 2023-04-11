@@ -1,3 +1,5 @@
+// import { useState } from "react";
+// import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./profileInfoUser.scss";
 
@@ -9,13 +11,16 @@ import {
 } from "react-icons/md";
 
 const ProfileInfoUser = (props) => {
-  const { showMore, setShowMore } = props;
+  const { showMore, setShowMore, pathname } = props;
+  // const pathname = useLocation().pathname;
+
   const handleshowSubMore = () => {
-    console.log(showMore);
-    if (!showMore) return setShowMore("show");
+    if (!showMore) return setShowMore("active");
     return setShowMore("");
   };
+
   console.log(showMore);
+  console.log("pathname", pathname);
   return (
     <div className="profile-user">
       <div className="profile-image__cover">
@@ -59,37 +64,61 @@ const ProfileInfoUser = (props) => {
         </div>
       </div>
       <div className="post-items ">
-        <div className="post-item active">
+        <div
+          className={`post-item ${
+            pathname === "/profile/posts" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="posts">
             Bài viết
           </Link>
         </div>
-        <div className="post-item">
+        <div
+          className={`post-item ${
+            pathname === "/profile/introduce" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="introduce">
             Giới thiệu
           </Link>
         </div>
-        <div className="post-item">
+        <div
+          className={`post-item ${
+            pathname === "/profile/friends" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="friends">
             Bạn bè
           </Link>
         </div>
-        <div className="post-item">
+        <div
+          className={`post-item ${
+            pathname === "/profile/images" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="images">
             Ảnh
           </Link>
         </div>
-        <div className="post-item">
+        <div
+          className={`post-item ${
+            pathname === "/profile/videos" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="videos">
             Video
           </Link>
         </div>
-        <div className="post-item">
+        <div
+          className={`post-item ${
+            pathname === "/profile/checkIn" ? "active" : ""
+          }`}
+        >
           <Link className="link-post" to="checkIn">
             Check in
           </Link>
         </div>
-        <div className="post-item" onClick={handleshowSubMore}>
+        <div className={`post-item ${showMore}`} onClick={handleshowSubMore}>
           <div className="link-post" to="seeMore">
             Xem thêm
           </div>
