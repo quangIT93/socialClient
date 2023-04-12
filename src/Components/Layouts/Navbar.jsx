@@ -16,7 +16,7 @@ const Navbar = (props) => {
   const [activeIconChat, setActiveIconChat] = useState("");
   const [activeIconMenu, setActiveIconMenu] = useState("");
 
-  const { showMore, setShowMore, pathname } = props;
+  const { showMore, pathname } = props;
 
   const handleClickIconMenu = () => {
     if (!activeIconMenu) {

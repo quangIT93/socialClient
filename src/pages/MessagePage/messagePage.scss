@@ -1,0 +1,65 @@
+@import "../../rootCSS/variables";
+
+.messagePage {
+  margin-top: 5rem;
+  background-color: $dark-color__black;
+  height: 100%;
+  display: flex;
+  .left-items {
+    background: $light-color__black;
+    flex: 3;
+    padding: 2rem;
+
+    .left-wrapItem {
+      text-decoration: none;
+      .left-item__user {
+        display: flex;
+        max-height: 3rem;
+        align-items: center;
+        .wrap-item__imgUser {
+          margin-right: 1rem;
+        }
+      }
+      .left-item {
+        padding: 1rem;
+        border-radius: 12px;
+        display: flex;
+        max-height: 4rem;
+        align-items: center;
+        .icon-item {
+          font-size: 3rem;
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          background: red;
+        }
+        .left-item__user {
+          display: flex;
+          align-items: center;
+          .wrap-item__imgUser {
+            border-radius: 50%;
+            img {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+            }
+          }
+
+          h2 {
+          }
+        }
+      }
+    }
+  }
+
+  .homePage-posts {
+    flex: 5;
+    background: $light-color__white;
+  }
+
+  .homePage-infos {
+    flex: 3;
+    background: $light-color__black;
+  }
+}
