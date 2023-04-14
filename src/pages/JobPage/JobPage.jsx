@@ -1,51 +1,62 @@
+import { useState, useRef } from "react";
+
 import "./jobPage.scss";
 import { Link } from "react-router-dom";
-import { MdPeopleAlt } from "react-icons/md";
+import {
+  MdPeopleAlt,
+  MdKeyboardArrowDown,
+  MdKeyboardArrowUp,
+} from "react-icons/md";
+
+import { itemJobPage } from "./itemJobPage";
 const JobPage = () => {
+  const [displayCount, setDisplayCount] = useState(5);
+  const handleShowMore = () => {
+    if (displayCount < itemJobPage.length) {
+      setDisplayCount(itemJobPage.length);
+    } else {
+      setDisplayCount(5);
+    }
+  };
   return (
     <div className="jobPage">
-      {" "}
       <div className="left-items">
-        <Link to="/homePage" className="left-wrapItem">
+        <Link to="/profile" className="left-wrapItem">
           <div className="left-item">
             <div className="left-item__user">
               <div className="wrap-item__imgUser">
                 <img src="../assets/avatar1.jpg" alt="" />
               </div>
-              <h2>Thái Minh Quang</h2>
+              <h2>Thái Minh Quang </h2>
             </div>
           </div>
         </Link>
-        <Link to="/friendPage" className="left-wrapItem">
-          <div className="left-item">
-            <MdPeopleAlt className="icon-item" />
-            Friend
+        {itemJobPage.slice(0, displayCount).map((v, i) => {
+          return (
+            <Link to={v.itemLink} className="left-wrapItem">
+              <div className="left-item">
+                {/* <{v.itemIcon} className="icon-item" color="#f4506d" /> */}
+                {v.itemIcon}
+                {v.itemName}
+              </div>
+            </Link>
+          );
+        })}
+        <div className="left-wrapItem" onClick={handleShowMore}>
+          <div className="left-item more-item">
+            {displayCount < itemJobPage.length ? (
+              <>
+                <MdKeyboardArrowDown className="icon-item" color="#ccc" />
+                Xem thêm
+              </>
+            ) : (
+              <>
+                <MdKeyboardArrowUp className="icon-item" color="#ccc" />
+                Thu gọn
+              </>
+            )}
           </div>
-        </Link>
-        <Link to="/watchPage" className="left-wrapItem">
-          <div className="left-item">
-            <MdPeopleAlt className="icon-item" />
-            Watch
-          </div>
-        </Link>
-        <Link to="/groupPage" className="left-wrapItem">
-          <div className="left-item">
-            <MdPeopleAlt className="icon-item" />
-            Group
-          </div>
-        </Link>
-        <Link to="/messagePage" className="left-wrapItem">
-          <div className="left-item">
-            <MdPeopleAlt className="icon-item" />
-            Message
-          </div>
-        </Link>
-        <Link to="/shoppingPage" className="left-wrapItem">
-          <div className="left-item">
-            <MdPeopleAlt className="icon-item" />
-            Shopping
-          </div>
-        </Link>
+        </div>
       </div>
       <div className="homePage-posts"></div>
       <div className="homePage-infos"></div>

@@ -6,9 +6,9 @@
   height: 100%;
   display: flex;
   .left-items {
-    background: $light-color__black;
     flex: 3;
-    padding: 2rem;
+    padding: 1rem;
+    overflow-y: scroll;
 
     .left-wrapItem {
       text-decoration: none;
@@ -26,13 +26,15 @@
         display: flex;
         max-height: 4rem;
         align-items: center;
+        font-size: 1.4rem;
+        margin: 0.6rem 0;
         .icon-item {
           font-size: 3rem;
           margin-right: 1rem;
         }
 
         &:hover {
-          background: red;
+          background: $darkL-color__white;
         }
         .left-item__user {
           display: flex;
@@ -47,7 +49,17 @@
           }
 
           h2 {
+            font-size: 1.6rem;
           }
+        }
+      }
+
+      .more-item {
+        justify-content: center;
+        cursor: pointer;
+        background: $darkL-color__white;
+        &:hover {
+          background: $darkl-color__white;
         }
       }
     }

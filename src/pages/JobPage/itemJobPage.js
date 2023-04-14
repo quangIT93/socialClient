@@ -6,11 +6,11 @@ import {
   MdMessage,
 } from "react-icons/md";
 
-export const itemHomePage = [
+export const itemJobPage = [
   {
-    itemName: "Friend",
+    itemName: "Trang chủ",
     itemIcon: <MdPeopleAlt className="icon-item" color="#51d5c4" />,
-    itemLink: "/friendPage",
+    itemLink: "/homePage",
   },
   {
     itemName: "Watch",
