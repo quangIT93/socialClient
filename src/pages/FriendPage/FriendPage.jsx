@@ -58,8 +58,72 @@ const FriendPage = () => {
           </div>
         </div>
       </div>
-      <div className="homePage-posts"></div>
-      <div className="homePage-infos"></div>
+      <div className="right-items">
+        <div className="header-right">
+          <h2>Bạn bè</h2>
+        </div>
+        <div className="list-items__right">
+          <div className="item-right">
+            <div className="img-item">
+              <img src="" alt="" />
+            </div>
+            <div className="item-right__content">
+              <h2>Tên bạn bè</h2>
+              <div className="number-friends">1 bạn chung</div>
+              <div className="btn-accept">Xác nhận</div>
+              <div className="btn-delete">Xoá</div>
+            </div>
+          </div>
+
+          <div className="item-right">
+            <div className="img-item">
+              <img src="" alt="" />
+            </div>
+            <div className="item-right__content">
+              <h2>Tên bạn bè</h2>
+              <div className="number-friends">1 bạn chung</div>
+              <div className="btn-accept">Xác nhận</div>
+              <div className="btn-delete">Xoá</div>
+            </div>
+          </div>
+
+          <div className="item-right">
+            <div className="img-item">
+              <img src="" alt="" />
+            </div>
+            <div className="item-right__content">
+              <h2>Tên bạn bè</h2>
+              <div className="number-friends">1 bạn chung</div>
+              <div className="btn-accept">Xác nhận</div>
+              <div className="btn-delete">Xoá</div>
+            </div>
+          </div>
+
+          <div className="item-right">
+            <div className="img-item">
+              <img src="" alt="" />
+            </div>
+            <div className="item-right__content">
+              <h2>Tên bạn bè</h2>
+              <div className="number-friends">1 bạn chung</div>
+              <div className="btn-accept">Xác nhận</div>
+              <div className="btn-delete">Xoá</div>
+            </div>
+          </div>
+
+          <div className="item-right">
+            <div className="img-item">
+              <img src="" alt="" />
+            </div>
+            <div className="item-right__content">
+              <h2>Tên bạn bè</h2>
+              <div className="number-friends">1 bạn chung</div>
+              <div className="btn-accept">Xác nhận</div>
+              <div className="btn-delete">Xoá</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

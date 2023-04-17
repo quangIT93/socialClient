@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import "./homePage.scss";
@@ -51,6 +51,15 @@ const Homepage = () => {
       setDisplayCount(5);
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      ref.current.scrollBy({
+        left: -256, // scroll qua 4rem
+        // behavior: "smooth", // thêm hiệu ứng smooth scroll
+      });
+    }, 2000);
+  });
   return (
     <div className="homePage">
       <div className="left-items">
