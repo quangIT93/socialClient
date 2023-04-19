@@ -39,11 +39,11 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          {/* <Route path="/" element={<Landing />} />
           <Route path="/" element={<Auth />}>
             <Route path="login" element={<LoginForm />} />
             <Route path="register" element={<LogoutButton />} />
-          </Route>
+          </Route> */}
           <Route path="/" element={<ProtectedRoute />}>
             <Route path="homepage" element={<Homepage />} />
             <Route path="profile" element={<Profile />}>

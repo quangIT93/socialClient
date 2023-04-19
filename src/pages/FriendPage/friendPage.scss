@@ -1,7 +1,7 @@
 @import "../../rootCSS/variables";
 
 .friendPage {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   background-color: $dark-color__black;
   height: 100%;
   display: flex;
@@ -9,24 +9,24 @@
     flex: 1;
     padding: 1rem;
     overflow-y: scroll;
-
+    .left-header {
+      padding: 0 1rem;
+      margin: 0.6rem 0;
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        border-bottom: 1px solid;
+      }
+    }
     .left-wrapItem {
       text-decoration: none;
-      .left-item__user {
-        display: flex;
-        max-height: 3rem;
-        align-items: center;
-        .wrap-item__imgUser {
-          margin-right: 1rem;
-        }
-      }
       .left-item {
         padding: 1rem;
         border-radius: 12px;
         display: flex;
         max-height: 4rem;
         align-items: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin: 0.6rem 0;
         .icon-item {
           font-size: 3rem;
@@ -94,6 +94,13 @@
         width: calc(25% - 1rem);
         margin-left: 1rem;
         border-radius: 12px;
+        cursor: pointer;
+        &:hover {
+          background-color: $darkl-color__white;
+          transition: all 0.3s linear;
+          color: $white;
+        }
+
         .img-item {
           display: flex;
           // padding: 0.5rem;
@@ -101,9 +108,10 @@
 
           img {
             width: 100%;
-            height: 12rem;
+            height: 16rem;
             margin: 0 auto;
             border-radius: 12px;
+            object-fit: cover;
           }
         }
         .item-right__content {
@@ -127,7 +135,13 @@
             text-align: center;
             padding: 0.4rem 0;
             border-radius: 5px;
-            background-color: $primary-color;
+            background-color: $blue-color__1;
+
+            &:hover {
+              color: $white;
+              background-color: $primary-color;
+              transition: all 0.3s linear;
+            }
           }
 
           .btn-delete {
@@ -135,8 +149,13 @@
             text-align: center;
             padding: 0.4rem 0;
             margin-top: 0.4rem;
-            background-color: $primary-color;
             border-radius: 5px;
+            background-color: $blue-color__1;
+            &:hover {
+              color: $white;
+              transition: all 0.3s linear;
+              background-color: $color-red;
+            }
           }
         }
       }

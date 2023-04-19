@@ -1,7 +1,7 @@
 @import "../../rootCSS/variables";
 
 .homePage {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   background-color: $dark-color__black;
   background: $light-color__black;
   height: 100%;
@@ -10,7 +10,7 @@
     flex: 3;
     padding: 1rem;
     overflow-y: scroll;
-
+    height: calc(100vh - 3.5rem);
     .left-wrapItem {
       text-decoration: none;
       .left-item__user {
@@ -27,8 +27,8 @@
         display: flex;
         max-height: 4rem;
         align-items: center;
-        font-size: 1.4rem;
-        margin: 0.6rem 0;
+        font-size: 1.2rem;
+        margin: 0.2rem 0;
         .icon-item {
           font-size: 3rem;
           margin-right: 1rem;
@@ -72,6 +72,8 @@
     overflow-y: scroll;
     padding: 1rem;
     background: $darkL-color__black;
+    height: calc(100vh - 3.5rem);
+
     .homePage-post__feed {
       // padding: 1rem;
       background: $light-color__black;
@@ -472,7 +474,7 @@
                     font-weight: 700;
                   }
                   .text-comment {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
 
                     color: $dark-color__white;
 
@@ -518,6 +520,7 @@
     padding: 1rem;
     background: $darkL-color__white;
     overflow-y: scroll;
+    height: calc(100vh - 3.5rem);
 
     .homePage-info__sponsor {
       background: $light-color__black;

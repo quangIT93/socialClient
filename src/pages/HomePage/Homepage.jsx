@@ -52,14 +52,6 @@ const Homepage = () => {
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      ref.current.scrollBy({
-        left: -256, // scroll qua 4rem
-        // behavior: "smooth", // thêm hiệu ứng smooth scroll
-      });
-    }, 2000);
-  });
   return (
     <div className="homePage">
       <div className="left-items">
@@ -75,7 +67,7 @@ const Homepage = () => {
         </Link>
         {itemHomePage.slice(0, displayCount).map((v, i) => {
           return (
-            <Link to={v.itemLink} className="left-wrapItem">
+            <Link to={v.itemLink} className="left-wrapItem" key={i}>
               <div className="left-item">
                 {/* <{v.itemIcon} className="icon-item" color="#f4506d" /> */}
                 {v.itemIcon}

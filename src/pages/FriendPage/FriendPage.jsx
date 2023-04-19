@@ -21,19 +21,12 @@ const FriendPage = () => {
   return (
     <div className="friendPage">
       <div className="left-items">
-        <Link to="/profile" className="left-wrapItem">
-          <div className="left-item">
-            <div className="left-item__user">
-              <div className="wrap-item__imgUser">
-                <img src="../assets/avatar1.jpg" alt="" />
-              </div>
-              <h2>Thái Minh Quang </h2>
-            </div>
-          </div>
-        </Link>
+        <div className="left-header">
+          <h2>Friend</h2>
+        </div>
         {itemFriendPage.slice(0, displayCount).map((v, i) => {
           return (
-            <Link to={v.itemLink} className="left-wrapItem">
+            <Link to={v.itemLink} className="left-wrapItem" key={i}>
               <div className="left-item">
                 {/* <{v.itemIcon} className="icon-item" color="#f4506d" /> */}
                 {v.itemIcon}
@@ -60,12 +53,12 @@ const FriendPage = () => {
       </div>
       <div className="right-items">
         <div className="header-right">
-          <h2>Bạn bè</h2>
+          <h2>Lời mời kết bạn</h2>
         </div>
         <div className="list-items__right">
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/avatar3.jpg" alt="" />
             </div>
             <div className="item-right__content">
               <h2>Tên bạn bè</h2>
@@ -77,7 +70,7 @@ const FriendPage = () => {
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/avatar2.jpg" alt="" />
             </div>
             <div className="item-right__content">
               <h2>Tên bạn bè</h2>
@@ -89,7 +82,7 @@ const FriendPage = () => {
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/avatar4.jpg" alt="" />
             </div>
             <div className="item-right__content">
               <h2>Tên bạn bè</h2>
@@ -101,7 +94,7 @@ const FriendPage = () => {
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/avatar1.jpg" alt="" />
             </div>
             <div className="item-right__content">
               <h2>Tên bạn bè</h2>
@@ -113,7 +106,7 @@ const FriendPage = () => {
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/avatar5.jpg" alt="" />
             </div>
             <div className="item-right__content">
               <h2>Tên bạn bè</h2>

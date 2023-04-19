@@ -33,7 +33,7 @@ const MessagePage = () => {
         </Link>
         {itemMessagePage.slice(0, displayCount).map((v, i) => {
           return (
-            <Link to={v.itemLink} className="left-wrapItem">
+            <Link to={v.itemLink} className="left-wrapItem" key={i}>
               <div className="left-item">
                 {/* <{v.itemIcon} className="icon-item" color="#f4506d" /> */}
                 {v.itemIcon}

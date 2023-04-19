@@ -22,19 +22,12 @@ const ShoppingPage = () => {
   return (
     <div className="shoppingPage">
       <div className="left-items">
-        <Link to="/profile" className="left-wrapItem">
-          <div className="left-item">
-            <div className="left-item__user">
-              <div className="wrap-item__imgUser">
-                <img src="../assets/avatar1.jpg" alt="" />
-              </div>
-              <h2>Thái Minh Quang </h2>
-            </div>
-          </div>
-        </Link>
+        <div className="left-header">
+          <h2>Shopping</h2>
+        </div>
         {itemShoppingPage.slice(0, displayCount).map((v, i) => {
           return (
-            <Link to={v.itemLink} className="left-wrapItem">
+            <Link to={v.itemLink} className="left-wrapItem" key={i}>
               <div className="left-item">
                 {/* <{v.itemIcon} className="icon-item" color="#f4506d" /> */}
                 {v.itemIcon}
@@ -60,67 +53,61 @@ const ShoppingPage = () => {
         </div>
       </div>
       <div className="right-items">
-        <div className="header-right">
-          <h2>Bạn bè</h2>
-        </div>
         <div className="list-items__right">
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/product/cabinet.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
-              <div className="number-friends">1 bạn chung</div>
-              <div className="btn-accept">Xác nhận</div>
-              <div className="btn-delete">Xoá</div>
+              <h2>4.000.000đ</h2>
+              <div className="item-product">
+                Shop cần bán kệ tủ giá xuất xưỡng .có giao hàng tận nơi
+              </div>
+              <div className="number-address">Thành Phố Hồ Chí Minh</div>
             </div>
           </div>
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/product/sandal.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
-              <div className="number-friends">1 bạn chung</div>
-              <div className="btn-accept">Xác nhận</div>
-              <div className="btn-delete">Xoá</div>
+              <h2>250.000đ</h2>
+              <div className="item-product">Shop Xả Giá Rẻ Cho Chị Em Ạ</div>
+              <div className="number-address">Thành Phố Hồ Chí Minh</div>
             </div>
           </div>
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/product/clothes.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
-              <div className="number-friends">1 bạn chung</div>
-              <div className="btn-accept">Xác nhận</div>
-              <div className="btn-delete">Xoá</div>
+              <h2>120.000đ</h2>
+              <div className="item-product">Shop A.T bán hàng jeans nam</div>
+              <div className="number-address">Thành Phố Hồ Chí Minh</div>
             </div>
           </div>
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/product/home.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
-              <div className="number-friends">1 bạn chung</div>
-              <div className="btn-accept">Xác nhận</div>
-              <div className="btn-delete">Xoá</div>
+              <h2>3.000.000đ</h2>
+              <div className="item-product">Trọ Quận 2 giá rẻ</div>
+              <div className="number-address">Thành Phố Hồ Chí Minh</div>
             </div>
           </div>
 
           <div className="item-right">
             <div className="img-item">
-              <img src="" alt="" />
+              <img src="../../assets/product/shoes.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
-              <div className="number-friends">1 bạn chung</div>
-              <div className="btn-accept">Xác nhận</div>
-              <div className="btn-delete">Xoá</div>
+              <h2>899.000đ</h2>
+              <div className="item-product">Giày shop cao cấp</div>
+              <div className="number-address">Thành Phố Hồ Chí Minh</div>
             </div>
           </div>
         </div>

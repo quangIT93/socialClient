@@ -1,7 +1,7 @@
 @import "../../rootCSS/variables";
 
 .header {
-  height: 5rem;
+  height: 3.5rem;
   background-color: $dark-color__black;
   //   background-color: $primary-color;
   //   display: flex;
@@ -19,16 +19,17 @@
     margin: 0 1rem;
     .nav_logoInput {
       display: flex;
+      align-items: center;
       .nav-logo {
         color: #fff;
         text-decoration: none;
         background-color: $primary-color;
-        line-height: 2rem;
+        // line-height: 2rem;
         display: inline-block;
         padding: 0.2rem 1.2rem;
         border-radius: 20px 5px;
         align-items: center;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       }
       .nav-input {
         margin-left: 1rem;
@@ -67,15 +68,14 @@
         .nav-link {
           color: #fff;
           text-decoration: none;
-          padding: 0.4rem 1.4rem;
+          padding: 0rem 1.4rem;
           line-height: 2rem;
           display: inline-block;
           border-radius: 5px;
           margin-left: 0.2rem;
           min-width: 4rem;
-          font-size: 1.4rem;
-
-          min-width: 8rem;
+          font-size: 1.2rem;
+          min-width: 5rem;
           text-align: center;
           &:hover {
             background-color: $light-color__gray;
@@ -99,8 +99,8 @@
         justify-content: center;
         background-color: $dark-color__gray;
         border-radius: 50%;
-        width: 3.6rem;
-        height: 3.6rem;
+        width: 2.6rem;
+        height: 2.6rem;
         margin-left: 0.5rem;
         position: relative;
         cursor: pointer;
@@ -115,7 +115,7 @@
         .nav-icon {
           //   background-color: red;
           color: #fff;
-          font-size: 2.8rem;
+          font-size: 1.8rem;
           border-radius: 50%;
         }
 
@@ -176,8 +176,8 @@
 
       .nav-user {
         img {
-          width: 3.2rem;
-          height: 3.2rem;
+          width: 2.4rem;
+          height: 2.4rem;
           border-radius: 50%;
         }
       }
