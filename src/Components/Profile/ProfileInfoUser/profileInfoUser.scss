@@ -56,11 +56,23 @@
     height: 14rem;
     border-bottom: 1px solid $light-color__white;
     @include mobile {
-      height: 24rem;
+      height: 18rem;
+      margin-top: 5rem;
     }
 
     @include mobile-large {
       height: 24rem;
+      margin-top: 5rem;
+    }
+
+    @include tablet-small {
+      height: 24rem;
+      margin-top: 5rem;
+    }
+
+    @include tablet {
+      height: 14rem;
+      margin-top: 0rem;
     }
 
     .user-info {
@@ -69,6 +81,18 @@
       justify-content: space-between;
       // align-items: center;
       height: 100%;
+      @include mobile {
+        display: block;
+      }
+
+      @include mobile-large {
+        display: block;
+      }
+
+      @include tablet-small {
+        display: block;
+      }
+
       .user-info__avatar {
         background-color: $light-color__black;
         position: absolute;
@@ -80,6 +104,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include mobile {
+          left: 20%;
+          top: -12rem;
+        }
+
+        @include mobile-large {
+          left: 33%;
+          top: -12rem;
+        }
+
+        @include tablet-small {
+          left: 36%;
+          top: -12rem;
+        }
+
+        @include tablet {
+          left: 40%;
+        }
+
+        @include tablet-large {
+          left: 43%;
+        }
+
         img {
           width: 12rem;
           height: 12rem;
@@ -108,6 +155,26 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 2rem;
+        @include mobile {
+          display: flex;
+          flex-wrap: nowrap;
+          text-align: center;
+          align-items: center;
+        }
+
+        @include mobile-large {
+          display: flex;
+          flex-wrap: nowrap;
+          text-align: center;
+          align-items: center;
+        }
+
+        @include tablet-small {
+          display: flex;
+          flex-wrap: nowrap;
+          text-align: center;
+          align-items: center;
+        }
         h2 {
           font-size: 3rem;
           color: $light-color__white;
@@ -122,6 +189,8 @@
         }
         .user-info__friends {
           position: relative;
+          width: 4rem;
+          height: 4rem;
           img {
             width: 4rem;
             height: 4rem;
@@ -146,6 +215,68 @@
           }
           :nth-child(6) {
             left: 0rem;
+          }
+          @include mobile {
+            :nth-child(1) {
+              left: 6rem;
+            }
+            :nth-child(2) {
+              left: 3rem;
+            }
+            :nth-child(3) {
+              left: 0rem;
+            }
+            :nth-child(4) {
+              left: -3rem;
+            }
+            :nth-child(5) {
+              left: -6rem;
+            }
+            :nth-child(6) {
+              left: -9rem;
+            }
+          }
+
+          @include mobile-large {
+            :nth-child(1) {
+              left: 6rem;
+            }
+            :nth-child(2) {
+              left: 3rem;
+            }
+            :nth-child(3) {
+              left: 0rem;
+            }
+            :nth-child(4) {
+              left: -3rem;
+            }
+            :nth-child(5) {
+              left: -6rem;
+            }
+            :nth-child(6) {
+              left: -9rem;
+            }
+          }
+
+          @include tablet-small {
+            :nth-child(1) {
+              left: 6rem;
+            }
+            :nth-child(2) {
+              left: 3rem;
+            }
+            :nth-child(3) {
+              left: 0rem;
+            }
+            :nth-child(4) {
+              left: -3rem;
+            }
+            :nth-child(5) {
+              left: -6rem;
+            }
+            :nth-child(6) {
+              left: -9rem;
+            }
           }
 
           .more-friends {
@@ -182,13 +313,13 @@
       }
       .user-info__edit {
         //   padding: 2rem;\
-        height: 100%;
+        // height: 100%;
         //   background-color: aqua;
-        margin-right: 2rem;
+        margin: 0 2rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        align-items: flex-start;
+        // align-items: flex-start;
         span:first-child {
           margin-bottom: 2rem;
         }
@@ -283,9 +414,11 @@
       }
 
       @include tablet-small {
+        display: none;
       }
 
       @include tablet {
+        display: none;
       }
 
       @include tablet-large {

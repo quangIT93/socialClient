@@ -1,8 +1,16 @@
 @import "../../rootCSS/variables";
+@import "../../rootCSS/responsive.scss";
 
 .profile {
   margin-top: 3.5rem;
   background-color: $dark-color__black;
   height: 100%;
   width: 100%;
+  @include mobile {
+    overflow-x: hidden;
+  }
+
+  @include mobile-large {
+    overflow-x: hidden;
+  }
 }
