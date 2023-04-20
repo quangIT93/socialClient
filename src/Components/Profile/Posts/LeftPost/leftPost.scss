@@ -1,4 +1,5 @@
 @import "../../../../rootCSS/variables";
+@import "../../../../rootCSS/responsive.scss";
 
 .profile-post__left {
   border-radius: 12px;
@@ -8,7 +9,21 @@
   gap: 1.2rem;
   overflow-y: scroll;
   height: calc(100vh - 5rem);
+  @include mobile {
+    display: none;
+  }
 
+  @include mobile-large {
+    display: none;
+  }
+
+  @include tablet-small {
+    display: none;
+  }
+
+  @include tablet {
+    display: block;
+  }
   .post-left__introduce {
     background-color: $light-color__black;
     border-radius: 12px;

@@ -16,14 +16,31 @@ const Navbar = (props) => {
   const [activeIconNotify, setActiveIconNotify] = useState("");
   const [activeIconChat, setActiveIconChat] = useState("");
   const [activeIconMenu, setActiveIconMenu] = useState("");
+  const [activeIconSubMenu, setActiveIconSubMenu] = useState("");
+  const [subMenu, setSubMenu] = useState("");
 
   const { showMore, pathname } = props;
+
+  const handleClickSubMenu = () => {
+    if (!activeIconSubMenu) {
+      setActiveIconSubMenu("active");
+      setActiveIconChat("");
+      setActiveIconMenu("");
+      setActiveIconNotify("");
+      setSubMenu("active");
+    } else {
+      setActiveIconSubMenu("");
+      setSubMenu("");
+    }
+  };
 
   const handleClickIconMenu = () => {
     if (!activeIconMenu) {
       setActiveIconMenu("active");
       setActiveIconChat("");
       setActiveIconNotify("");
+      setActiveIconSubMenu("");
+      setSubMenu("");
     } else {
       setActiveIconMenu("");
     }
@@ -34,6 +51,8 @@ const Navbar = (props) => {
       setActiveIconNotify("active");
       setActiveIconChat("");
       setActiveIconMenu("");
+      setActiveIconSubMenu("");
+      setSubMenu("");
     } else {
       setActiveIconNotify("");
     }
@@ -44,8 +63,17 @@ const Navbar = (props) => {
       setActiveIconChat("active");
       setActiveIconNotify("");
       setActiveIconMenu("");
+      setActiveIconSubMenu("");
+      setSubMenu("");
     } else {
       setActiveIconChat("");
+    }
+  };
+
+  const closeMenu = () => {
+    if (activeIconSubMenu) {
+      setSubMenu("");
+      setActiveIconSubMenu("");
     }
   };
   console.log(showMore);
@@ -110,7 +138,10 @@ const Navbar = (props) => {
         </ul>
 
         <div className="nav-user__setup">
-          <div className={`icon-bar ${activeIconMenu}`}>
+          <div
+            className={`icon-bar ${activeIconSubMenu} nav-wrap__icon`}
+            onClick={handleClickSubMenu}
+          >
             <MdTableRows />
           </div>
           <div
@@ -158,6 +189,38 @@ const Navbar = (props) => {
           </Link>
         </div>
       </nav>
+      <ul className={`sub-menu ${subMenu}`} onClick={closeMenu}>
+        <li className="nav-item">
+          <Link className="nav-link" to="/profile">
+            Profile
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/homePage">
+            Trang chủ
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/friendPage">
+            Bạn bè
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/watchPage">
+            Watch
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/groupPage">
+            Nhóm
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/shoppingPage">
+            Mua sắm
+          </Link>
+        </li>
+      </ul>
     </header>
   );
 };

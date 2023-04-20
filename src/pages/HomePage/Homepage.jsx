@@ -27,7 +27,6 @@ import { itemHomePage } from "./itemHomePage";
 
 const Homepage = () => {
   const [displayCount, setDisplayCount] = useState(5);
-
   const ref = useRef(null);
 
   const handleClickScrollLeft = () => {

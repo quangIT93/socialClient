@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import type { RootState } from "./Type/types";
 
 // ladding
-// import Landing from "./Components/Layouts/Landing";
+import Landing from "./Components/Layouts/Landing";
 
 // auth
 // import LoginForm from "./Components/Auth/LoginForm";
@@ -39,8 +39,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* <Route path="/" element={<Landing />} />
-          <Route path="/" element={<Auth />}>
+          <Route path="/" element={<Landing />} />
+          {/* <Route path="/" element={<Auth />}>
             <Route path="login" element={<LoginForm />} />
             <Route path="register" element={<LogoutButton />} />
           </Route> */}
