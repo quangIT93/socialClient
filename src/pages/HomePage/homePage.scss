@@ -1,4 +1,5 @@
 @import "../../rootCSS/variables";
+@import "../../rootCSS/responsive.scss";
 
 .homePage {
   margin-top: 3.5rem;
@@ -11,6 +12,26 @@
     padding: 1rem;
     overflow-y: scroll;
     height: calc(100vh - 3.5rem);
+    @include mobile {
+      display: none;
+    }
+
+    @include mobile-large {
+      display: none;
+    }
+
+    @include tablet-small {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-large {
+      display: none;
+    }
+
     .left-wrapItem {
       text-decoration: none;
       .left-item__user {
@@ -19,6 +40,15 @@
         align-items: center;
         .wrap-item__imgUser {
           margin-right: 1rem;
+          h2 {
+            @include tablet {
+              color: 1rem;
+            }
+
+            @include tablet-large {
+              color: 1rem;
+            }
+          }
         }
       }
       .left-item {
@@ -521,6 +551,37 @@
     background: $darkL-color__white;
     overflow-y: scroll;
     height: calc(100vh - 3.5rem);
+    @include mobile {
+      display: none;
+    }
+
+    @include mobile-large {
+      display: none;
+    }
+
+    @include tablet-small {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-large {
+      display: none;
+    }
+
+    @include tablet-large {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    @include desktop-small {
+      display: none;
+    }
 
     .homePage-info__sponsor {
       background: $light-color__black;

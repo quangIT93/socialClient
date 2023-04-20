@@ -1,9 +1,8 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import "./friendPage.scss";
 
 import { Link } from "react-router-dom";
-import { MdPeopleAlt } from "react-icons/md";
 
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
@@ -73,7 +72,7 @@ const FriendPage = () => {
               <img src="../../assets/avatar2.jpg" alt="" />
             </div>
             <div className="item-right__content">
-              <h2>Tên bạn bè</h2>
+              <h2>Tên bạn bè Tên bạn bè ạn bè </h2>
               <div className="number-friends">1 bạn chung</div>
               <div className="btn-accept">Xác nhận</div>
               <div className="btn-delete">Xoá</div>

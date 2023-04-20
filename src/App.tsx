@@ -6,16 +6,16 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import type { RootState } from "./Type/types";
 
 // ladding
-import Landing from "./Components/Layouts/Landing";
+// import Landing from "./Components/Layouts/Landing";
 
 // auth
-import LoginForm from "./Components/Auth/LoginForm";
-import LogoutButton from "./Components/Auth/RegisterForm";
+// import LoginForm from "./Components/Auth/LoginForm";
+// import LogoutButton from "./Components/Auth/RegisterForm";
 // protected
 import ProtectedRoute from "./Components/routing/ProtectedRoute";
 
 // import Page
-import Auth from "./pages/Auth/Auth";
+// import Auth from "./pages/Auth/Auth";
 import Homepage from "./pages/HomePage/Homepage";
 import Profile from "./pages/Profile/Profile";
 import FriendPage from "./pages/FriendPage/FriendPage";

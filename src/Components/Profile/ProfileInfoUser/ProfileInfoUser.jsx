@@ -65,7 +65,7 @@ const ProfileInfoUser = (props) => {
       </div>
       <div className="post-items ">
         <div
-          className={`post-item ${
+          className={`post-item  ${
             pathname === "/profile/posts" ? "active" : ""
           }`}
         >
@@ -74,7 +74,7 @@ const ProfileInfoUser = (props) => {
           </Link>
         </div>
         <div
-          className={`post-item ${
+          className={`post-item  ${
             pathname === "/profile/introduce" ? "active" : ""
           }`}
         >
@@ -83,7 +83,7 @@ const ProfileInfoUser = (props) => {
           </Link>
         </div>
         <div
-          className={`post-item ${
+          className={`post-item  ${
             pathname === "/profile/friends" ? "active" : ""
           }`}
         >
@@ -92,7 +92,7 @@ const ProfileInfoUser = (props) => {
           </Link>
         </div>
         <div
-          className={`post-item ${
+          className={`post-item hide ${
             pathname === "/profile/images" ? "active" : ""
           }`}
         >
@@ -101,7 +101,7 @@ const ProfileInfoUser = (props) => {
           </Link>
         </div>
         <div
-          className={`post-item ${
+          className={`post-item hide ${
             pathname === "/profile/videos" ? "active" : ""
           }`}
         >
@@ -110,7 +110,7 @@ const ProfileInfoUser = (props) => {
           </Link>
         </div>
         <div
-          className={`post-item ${
+          className={`post-item hide ${
             pathname === "/profile/checkIn" ? "active" : ""
           }`}
         >
@@ -118,7 +118,7 @@ const ProfileInfoUser = (props) => {
             Check in
           </Link>
         </div>
-        <div className={`post-item ${showMore}`} onClick={handleshowSubMore}>
+        <div className={`post-item  ${showMore}`} onClick={handleshowSubMore}>
           <div className="link-post" to="seeMore">
             Xem thêm
           </div>

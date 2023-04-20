@@ -1,22 +1,68 @@
 @import "../../../rootCSS/variables";
-
+@import "../../../rootCSS/responsive.scss";
 .profile-user {
   background-color: $light-color__black;
   min-height: 46rem;
   max-width: 70rem;
   margin: 0 auto;
   border-radius: 12px 12px;
+  @include mobile {
+    max-width: 100%;
+  }
+
+  @include mobile-large {
+    max-width: 100%;
+  }
+
+  @include tablet-small {
+    max-width: 100%;
+  }
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  @include tablet-large {
+    max-width: 100%;
+  }
   .profile-image__cover {
     height: 100%;
     img {
       height: 32rem;
       width: 100%;
       border-radius: 5px;
+      @include mobile {
+        height: 18rem;
+      }
+
+      @include mobile-large {
+        height: 18rem;
+      }
+
+      @include tablet-small {
+        height: 32rem;
+      }
+
+      @include tablet {
+        height: 32rem;
+      }
+
+      @include tablet-large {
+        height: 32rem;
+      }
     }
   }
   .profile-user__info {
     height: 14rem;
     border-bottom: 1px solid $light-color__white;
+    @include mobile {
+      height: 24rem;
+    }
+
+    @include mobile-large {
+      height: 24rem;
+    }
+
     .user-info {
       display: flex;
       position: relative;
@@ -30,7 +76,7 @@
         height: 13rem;
         border-radius: 50%;
         top: -7rem;
-        left: 38rem;
+        left: 30rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -177,6 +223,7 @@
       margin-left: 0.4rem;
       height: 100%;
       position: relative;
+
       .link-post {
         color: $light-color__white;
         display: inline-block;
@@ -223,6 +270,25 @@
 
       .sub-post__items.active {
         display: flex;
+      }
+    }
+
+    .post-item.hide {
+      @include mobile {
+        display: none;
+      }
+
+      @include mobile-large {
+        display: none;
+      }
+
+      @include tablet-small {
+      }
+
+      @include tablet {
+      }
+
+      @include tablet-large {
       }
     }
 

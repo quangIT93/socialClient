@@ -1,19 +1,11 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import "./watchPage.scss";
 
 import { Link } from "react-router-dom";
 import {
-  MdPeopleAlt,
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
-} from "react-icons/md";
-
-import {
-  MdFlag,
-  // MdAddAPhoto,
-  MdAddPhotoAlternate,
-  MdVideoCameraBack,
   MdMoreHoriz,
   MdOutlineShare,
   MdModeComment,

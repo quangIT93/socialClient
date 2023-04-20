@@ -1,8 +1,11 @@
 @import "../../rootCSS/variables";
 
+@import "../../rootCSS/responsive.scss";
+
 .header {
   height: 3.5rem;
   background-color: $dark-color__black;
+  background-color: $darkc-color__black;
   //   background-color: $primary-color;
   //   display: flex;
   //   text-align: center;
@@ -35,8 +38,15 @@
         margin-left: 1rem;
         position: relative;
         display: flex;
+        @include mobile {
+          display: none;
+        }
+
+        @include mobile-large {
+          display: none;
+        }
         .input-search {
-          width: 24rem;
+          width: 16rem;
           border: none;
           outline: none;
           border-radius: 15px;
@@ -45,6 +55,14 @@
           padding: 0.2rem 0;
           padding-left: 2.4rem;
           font-size: 1.2rem;
+
+          @include tablet-small {
+            width: 16rem;
+          }
+
+          @include tablet {
+            width: 16rem;
+          }
         }
 
         .nav-input__icon {
@@ -64,17 +82,41 @@
     }
 
     .nav-items {
+      @include mobile {
+        display: none;
+      }
+
+      @include mobile-large {
+        display: none;
+      }
+
+      @include tablet-small {
+        display: none;
+      }
+
+      @include tablet-large {
+        display: none;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include tablet-large {
+        display: none;
+      }
+
       .nav-item {
         .nav-link {
           color: #fff;
           text-decoration: none;
-          padding: 0rem 1.4rem;
+          padding: 0rem 0.4rem;
           line-height: 2rem;
           display: inline-block;
           border-radius: 5px;
           margin-left: 0.2rem;
           min-width: 4rem;
-          font-size: 1.2rem;
+          font-size: 1rem;
           min-width: 5rem;
           text-align: center;
           &:hover {
@@ -92,9 +134,31 @@
 
     .nav-user__setup {
       display: flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
       //   align-items: center;
-      .nav-wrap__icon {
-        display: flex;
+      @include mobile {
+        font-size: 1.4rem;
+      }
+
+      @include mobile-large {
+      }
+
+      @include tablet-small {
+      }
+
+      @include tablet-large {
+      }
+
+      @include tablet {
+      }
+
+      @include tablet-large {
+      }
+      .icon-bar {
+        display: none;
         align-items: center;
         justify-content: center;
         background-color: $dark-color__gray;
@@ -112,11 +176,56 @@
             animation-fill-mode: forwards;
           }
         }
+        @include mobile {
+          display: flex;
+        }
+
+        @include mobile-large {
+          display: flex;
+        }
+
+        @include tablet-small {
+          display: flex;
+        }
+
+        @include tablet {
+          display: flex;
+        }
+
+        @include tablet-large {
+          display: flex;
+        }
+      }
+      .nav-wrap__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $dark-color__gray;
+        border-radius: 50%;
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-left: 0.5rem;
+        position: relative;
+        cursor: pointer;
+        @include mobile {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+        &:hover {
+          background-color: $light-color__gray;
+          .suggest {
+            animation: 0.4s fadeIn;
+            animation-fill-mode: forwards;
+          }
+        }
         .nav-icon {
           //   background-color: red;
           color: #fff;
           font-size: 1.8rem;
           border-radius: 50%;
+          @include mobile {
+            font-size: 1.6rem;
+          }
         }
 
         span {
@@ -130,6 +239,7 @@
           height: 1.2rem;
           text-align: center;
           line-height: 1.2rem;
+          font-size: 1rem;
         }
 
         .suggest {

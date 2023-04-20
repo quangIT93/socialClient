@@ -1,13 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import "./shoppingPage.scss";
 
 import { Link } from "react-router-dom";
-import {
-  MdPeopleAlt,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-} from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import { itemShoppingPage } from "./itemShoppingPage";
 const ShoppingPage = () => {

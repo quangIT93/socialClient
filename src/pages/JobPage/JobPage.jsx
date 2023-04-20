@@ -1,12 +1,8 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import "./jobPage.scss";
 import { Link } from "react-router-dom";
-import {
-  MdPeopleAlt,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-} from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import { itemJobPage } from "./itemJobPage";
 const JobPage = () => {

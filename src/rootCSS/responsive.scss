@@ -1,0 +1,57 @@
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$mobile-large-width: 600px;
+$tablet-width: 768px;
+$tablet-large-width: 992px;
+$desktop-width: 1024px;
+$desktop-width-large: 1200px;
+$desktop-width-largeExtra: 1400px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-large {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$mobile-large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  @media (min-width: #{$mobile-large-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  @media (min-width: #{$tablet-large-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-width-large - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width-large}) and (max-width: #{$desktop-width-largeExtra - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (min-width: #{$desktop-width-largeExtra}) {
+    @content;
+  }
+}

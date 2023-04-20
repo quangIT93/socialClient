@@ -5,6 +5,7 @@ import {
   MdOutlineGridOn,
   MdNotifications,
   MdOutlineChat,
+  MdTableRows,
 } from "react-icons/md";
 
 import "./navbar.scss";
@@ -109,6 +110,9 @@ const Navbar = (props) => {
         </ul>
 
         <div className="nav-user__setup">
+          <div className={`icon-bar ${activeIconMenu}`}>
+            <MdTableRows />
+          </div>
           <div
             className={`nav-menu nav-wrap__icon ${activeIconMenu}`}
             onClick={handleClickIconMenu}

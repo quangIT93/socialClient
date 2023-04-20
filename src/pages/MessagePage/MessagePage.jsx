@@ -1,12 +1,8 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import "./messagePage.scss";
 import { Link } from "react-router-dom";
-import {
-  MdPeopleAlt,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-} from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import { itemMessagePage } from "./itemMessagePage";
 const MessagePage = () => {

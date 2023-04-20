@@ -1,5 +1,5 @@
 @import "../../rootCSS/variables";
-
+@import "../../rootCSS/responsive.scss";
 .friendPage {
   margin-top: 3.5rem;
   background-color: $dark-color__black;
@@ -9,6 +9,25 @@
     flex: 1;
     padding: 1rem;
     overflow-y: scroll;
+    @include mobile {
+      display: none;
+    }
+
+    @include mobile-large {
+      display: none;
+    }
+
+    @include tablet-small {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-large {
+      display: none;
+    }
     .left-header {
       padding: 0 1rem;
       margin: 0.6rem 0;
@@ -95,6 +114,25 @@
         margin-left: 1rem;
         border-radius: 12px;
         cursor: pointer;
+        @include mobile {
+          width: calc(100% / 3 - 1rem);
+        }
+
+        @include mobile-large {
+          width: calc(100% / 3 - 1rem);
+        }
+
+        @include tablet-small {
+          width: calc(100% / 3 - 1rem);
+        }
+
+        @include tablet {
+          width: calc(100% / 4 - 1rem);
+        }
+
+        @include tablet-large {
+          width: calc(100% / 4 - 1rem);
+        }
         &:hover {
           background-color: $darkl-color__white;
           transition: all 0.3s linear;
@@ -112,6 +150,25 @@
             margin: 0 auto;
             border-radius: 12px;
             object-fit: cover;
+            @include mobile {
+              height: 10rem;
+            }
+
+            @include mobile-large {
+              height: 10rem;
+            }
+
+            @include tablet-small {
+              height: 12rem;
+            }
+
+            @include tablet {
+              height: 12rem;
+            }
+
+            @include tablet-large {
+              height: 14rem;
+            }
           }
         }
         .item-right__content {
@@ -122,6 +179,9 @@
             color: $light-color__white;
             font-weight: 600;
             // padding-top: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
           .number-friends {
