@@ -19,10 +19,11 @@ const ProfileFriend = () => {
 
         <div className="items-filter__friend">
           <div className="item-filter active">Tất cả bạn bè</div>
-          <div className="item-filter">Sinh nhật</div>
-          <div className="item-filter">Tỉnh/Thành Phố hiện tại</div>
-          <div className="item-filter">Quê quán</div>
-          <div className="item-filter">Đang theo dõi</div>
+          <div className="item-filter hide">Sinh nhật</div>
+          <div className="item-filter hide">Tỉnh/Thành Phố hiện tại</div>
+          <div className="item-filter hide">Quê quán</div>
+          <div className="item-filter hide">Đang theo dõi</div>
+          <div className="item-filter appear">Xem thêm</div>
         </div>
 
         <div className="list-friend__introduce">
