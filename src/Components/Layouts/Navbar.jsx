@@ -139,7 +139,7 @@ const Navbar = (props) => {
 
         <div className="nav-user__setup">
           <div
-            className={`icon-bar ${activeIconSubMenu} nav-wrap__icon`}
+            className={`icon-bar ${activeIconSubMenu}`}
             onClick={handleClickSubMenu}
           >
             <MdTableRows />
